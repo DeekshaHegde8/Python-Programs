@@ -1,7 +1,7 @@
 sal1=0
 def take_salary():
     global sal1
-    print("Enter your salary: ")
+    print("Enter your basic salary salary: ")
     sal1=int(input())
     return sal1
     
