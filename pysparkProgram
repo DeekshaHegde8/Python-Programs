@@ -1,0 +1,11 @@
+import pyspark
+from pyspark.sql import SparkSession
+import findspark
+findspark.init()
+session = SparkSession.builder.appName('app').getOrCreate()
+print(session)
+session
+data = session.read.option('header', 'true').csv(f"C:\\Users\\hegde_deeksha@lilly.com\\titanic.csv")
+data.show()
+print(type(data))
+rdd3 = data.filter(data.Pclass == 3).show(truncate=False)
